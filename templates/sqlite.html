@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="{{ url_for('static', filename = 'main_sqlite.js') }}" defer></script>
+</head>
+<body>
+    <h1>Введите предложения, чтобы добавить их в базу</h1>
+    <h2>Каждое предложение вводите с новой строки</h2>      
+        <textarea type='text' id="sent"></textarea>
+        <button id="click1">Добавить предложения в базу</button>
+    <h1>Введите слово для разбора по составу</h1> 
+        <input type='text' id="show_word"></input>
+        <button id="click2">Разобрать по составу</button>
+        <div id='morph'>{{morphemes}}</div>
+    <h1>Введите слово и его морфемный состав, чтобы добавить его в базу</h1> 
+    <h2>Пример: слово/слов-о</h2>  
+        <input type='text' id="word"></input>
+        <button id="click3">Добавить слово в базу</button>
+        <div id='word_exists'>{{txt}}</div>
+</body>
+</html>
